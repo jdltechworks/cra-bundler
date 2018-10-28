@@ -1,7 +1,10 @@
-import './index.css'
+import 'flexboxgrid'
+import 'assets/index.scss'
 import React from 'react'
 import { render } from 'react-dom'
-import App from 'components/Sample'
+
+import ClientContainer from 'providers/client'
+
 import * as serviceWorker from './serviceWorker'
 
 const app = document.getElementById('app')
@@ -19,7 +22,7 @@ const initialProps = () => {
 initialProps()
 
 
-render(<App {...props} />, app)
+render(<ClientContainer />, app)
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.

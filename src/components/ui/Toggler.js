@@ -4,7 +4,7 @@ import * as actions from 'modules/ui/Toggler/actions'
 
 const Toggler = ({
     toggler,
-    clickHandler,
+    toggle,
     children
 }) => children({...toggler, clickHandler})
 
