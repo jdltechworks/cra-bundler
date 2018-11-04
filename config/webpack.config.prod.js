@@ -107,7 +107,9 @@ module.exports = {
   // You can exclude the *.map files from the build during deployment.
   devtool: shouldUseSourceMap ? 'source-map' : false,
   // In production, we only want to load the app code.
-  entry: [paths.appIndexJs],
+  entry: {
+      app: [paths.appIndexJs]
+  },
   output: {
     // The build folder.
     path: paths.appBuild,
@@ -123,6 +125,8 @@ module.exports = {
       path
         .relative(paths.appSrc, info.absoluteResourcePath)
         .replace(/\\/g, '/'),
+    library: '[name]',
+    libraryExport: 'default'
   },
   optimization: {
     minimizer: [
@@ -189,7 +193,7 @@ module.exports = {
     // https://medium.com/webpack/webpack-4-code-splitting-chunk-graph-and-the-splitchunks-optimization-be739a861366
     splitChunks: {
       chunks: 'all',
-      name: () => 'vendor',
+      name: true,
     },
     // Keep the runtime chunk seperated to enable long term caching
     // https://twitter.com/wSokra/status/969679223278505985

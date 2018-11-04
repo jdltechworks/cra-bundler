@@ -375,7 +375,7 @@ module.exports = {
     // having to parse `index.html`.
     new ManifestPlugin({
       publicPath:  publicPath,
-      fileName: 'mix-manifest.json',
+      fileName: 'asset-manifest.json',
       writeToFileEmit: true
     }),
   ],

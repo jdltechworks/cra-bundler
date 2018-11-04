@@ -1,5 +1,5 @@
 {
-  "name": "llc_client",
+  "name": "@jdltechworks/cra",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

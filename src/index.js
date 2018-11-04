@@ -1,28 +1,6 @@
-import 'flexboxgrid'
 import 'assets/index.scss'
-import React from 'react'
-import { render } from 'react-dom'
-
-import ClientContainer from 'providers/client'
-
 import * as serviceWorker from './serviceWorker'
 
-const app = document.getElementById('app')
-
-let props = {}
-
-const initialProps = () => {
-    for(var i in app.dataset) {
-        props[i] = app.dataset[i]
-        //clear dataset
-        delete app.dataset[i]
-    }
-}
-
-initialProps()
-
-
-render(<ClientContainer />, app)
 
 export default () => console.log('pota')
 

@@ -42,9 +42,9 @@ function getServedPath(appPackageJson) {
 module.exports = {
   dotenv: resolveApp('.env'),
   appPath: resolveApp('.'),
-  appBuild: resolveApp('static'),
+  appBuild: resolveApp(`${os.homedir()}/Projects/llc_site/public`),
   hotPath: resolveApp(`${os.homedir()}/Projects/llc_site/public`),
-  appPublic: resolveApp('public'),
+  appPublic: resolveApp('laravel'),
   appHtml: resolveApp('public/index.html'),
   appIndexJs: resolveApp('src/index.js'),
   appPackageJson: resolveApp('package.json'),
